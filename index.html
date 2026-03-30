@@ -2293,7 +2293,7 @@
 <!-- ═══ BLOC 1 : LLM ═══ -->
 <div class="page page-core" id="page-bloc1-llm">
   <div class="module-hero">
-    <div class="module-tag">Bloc 1 · 10 min</div>
+    <div class="module-tag">Bloc 1</div>
     <h1 class="module-title">L’IA ne lit pas. <em>Elle calcule.</em></h1>
     <p class="module-desc">Une seule idée à retenir : l’IA prédit le token suivant. C’est pour ça qu’elle se trompe avec conviction.</p>
   </div>
@@ -2308,7 +2308,7 @@
       </div>
       <div style="padding-bottom:32px;">
         <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;margin-top:13px;">Tokenisation</p>
-        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Quand vous tapez du texte, l’IA ne le lit pas comme vous. Elle commence par découper le texte en <strong style="color:var(--navy);">tokens</strong> : mots entiers, morceaux de mots ou signes de ponctuation.</p>
+        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Quand vous tapez du texte, le modèle ne traite pas des mots, mais des <strong style="color:var(--navy);">tokens</strong> : mots entiers, morceaux de mots ou signes de ponctuation.</p>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;">
           <p style="font-size:14px;color:var(--muted);margin:0 0 12px;">« Le broker analyse le charterparty. »</p>
           <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;">
@@ -2336,22 +2336,32 @@
         <div style="width:1px;flex:1;background:var(--border);margin-top:8px;"></div>
       </div>
       <div style="padding-bottom:32px;">
-        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;margin-top:13px;">Vectorisation</p>
-        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Chaque token est converti en une liste de milliers de nombres = un <strong style="color:var(--navy);">vecteur</strong>. C’est une adresse dans un espace de grande dimension. Ces vecteurs sont appris sur des milliards de phrases : les tokens qui apparaissent dans des contextes similaires ont des vecteurs proches. C’est ce voisinage statistique qui constitue, pour le modèle, une forme de « sens ».</p>
+        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;margin-top:13px;">Vectorisation (embedding)</p>
+        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Chaque token est converti en un <strong style="color:var(--navy);">vecteur</strong> : une liste de milliers de nombres qui le positionne dans un espace mathématique. Des mots apparaissant dans des contextes similaires se retrouvent dans des régions proches de cet espace. C’est ce voisinage qui constitue, pour le modèle, une forme de « sens ».</p>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 22px;margin-bottom:14px;">
+          <p style="font-size:13px;font-weight:700;color:var(--muted);margin:0 0 10px;">Exemple simplifié (6 dimensions pour illustration)</p>
+          <div style="font-family:monospace;font-size:15px;display:flex;flex-direction:column;gap:6px;">
+            <div><span style="color:var(--navy);font-weight:700;display:inline-block;width:80px;">chat</span><span style="color:var(--muted);">→</span><span style="color:var(--blue);margin-left:10px;">[0.21, -1.34, 0.77, 2.10, -0.45, 0.03]</span></div>
+            <div><span style="color:var(--navy);font-weight:700;display:inline-block;width:80px;">chien</span><span style="color:var(--muted);">→</span><span style="color:var(--blue);margin-left:10px;">[0.18, -1.20, 0.81, 2.05, -0.40, 0.01]</span></div>
+            <div><span style="color:var(--navy);font-weight:700;display:inline-block;width:80px;">voiture</span><span style="color:var(--muted);">→</span><span style="color:var(--orange);margin-left:10px;">[-2.11, 0.90, -0.33, -1.44, 1.77, -0.52]</span></div>
+          </div>
+          <p style="font-size:14px;color:var(--muted);margin:10px 0 0;line-height:1.55;font-style:italic;">Chat et chien ont des vecteurs proches ; voiture s’en éloigne. Dans un vrai modèle, ces vecteurs auraient 4 000 à 12 000 dimensions.</p>
+        </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
           <div style="background:var(--surface2);border-radius:var(--radius);padding:16px 20px;border:1px solid var(--border);">
-            <p style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;">Taille du vecteur selon l’IA</p>
+            <p style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;">Taille des vecteurs selon les modèles</p>
             <div style="display:flex;flex-direction:column;gap:6px;">
               <div style="display:flex;justify-content:space-between;font-size:16px;"><span style="color:var(--text);">Claude (Anthropic)</span><span style="font-weight:700;color:var(--navy);">8 192</span></div>
               <div style="display:flex;justify-content:space-between;font-size:16px;"><span style="color:var(--text);">GPT-4 (OpenAI)</span><span style="font-weight:700;color:var(--navy);">12 288</span></div>
               <div style="display:flex;justify-content:space-between;font-size:16px;"><span style="color:var(--text);">Mistral Large</span><span style="font-weight:700;color:var(--navy);">4 096</span></div>
-              <div style="display:flex;justify-content:space-between;font-size:16px;"><span style="color:var(--text);">LLaMA 3 70B (Meta)</span><span style="font-weight:700;color:var(--navy);">8 192</span></div>
             </div>
-            <p style="font-size:13px;color:var(--muted);margin:10px 0 0;line-height:1.55;">Chaque IA a son propre nombre de dimensions. Plus ne signifie pas nécessairement meilleur : la qualité des données d’entraînement compte autant que la taille.</p>
+            <p style="font-size:15px;color:var(--muted);margin:10px 0 0;line-height:1.55;">Plus de dimensions ≠ modèle plus performant : données d’entraînement, architecture, méthodes d’optimisation… comptent autant que la taille.</p>
           </div>
           <div style="background:var(--accent2-dim);border-left:3px solid var(--blue);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;">
             <p style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:0 0 8px;">Qu’est-ce qu’une dimension ?</p>
-            <p style="font-size:16px;color:var(--text);line-height:1.7;margin:0;">Un chiffre dans la liste. L’ensemble encode des régularités : registre, fréquence de co-occurrence, champ lexical. Pris séparément, un chiffre n’a pas de signification claire. C’est la position globale du vecteur par rapport aux autres qui compte.</p>
+            <p style="font-size:15px;color:var(--text);line-height:1.7;margin:0 0 10px;">Imaginez un plan avec deux axes : horizontal et vertical. Une position dans ce plan s’exprime avec 2 nombres. Un espace à 8 192 dimensions, c’est la même logique, mais avec 8 192 axes. Chaque nombre du vecteur indique la position sur un de ces axes.</p>
+            
+            <p style="font-size:15px;color:var(--text);line-height:1.7;margin:0;">Pris seul, ce nombre ne signifie rien. C’est la position globale dans cet espace, comparée à celle de tous les autres vecteurs, qui encode l’information.</p>
           </div>
         </div>
       </div>
@@ -2364,8 +2374,8 @@
         <div style="width:1px;flex:1;background:var(--border);margin-top:8px;"></div>
       </div>
       <div style="padding-bottom:32px;">
-        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;margin-top:13px;">Mécanisme d’attention</p>
-        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Ces vecteurs traversent de nombreuses couches du réseau. À chaque couche, la représentation d’un token est ajustée en fonction de tous les autres tokens présents dans la phrase. C’est ainsi que le modèle tient compte du contexte.</p>
+        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;margin-top:13px;">Transformer et mécanisme d’attention</p>
+        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 20px;">Les vecteurs traversent une succession de couches d’un réseau de neurones : le <strong style="color:var(--navy);">Transformer</strong>. Le mécanisme clé est l’<strong style="color:var(--navy);">attention</strong> : à chaque couche, la représentation d’un token est recalculée en fonction de tous les autres tokens présents dans la séquence, selon leur pertinence contextuelle. Chaque mot « regarde » les autres mots et ajuste sa représentation.</p>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:14px;">
           <p style="font-size:14px;color:var(--muted);margin:0 0 14px;">Poids d’attention vers « piraterie » dans une phrase maritime</p>
           <div style="display:flex;flex-direction:column;gap:8px;">
@@ -2375,22 +2385,26 @@
             <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:15px;color:var(--muted);width:88px;flex-shrink:0;text-align:right;">VLCC</span><div style="flex:1;height:16px;background:var(--surface2);border-radius:3px;overflow:hidden;"><div style="width:88%;height:100%;background:var(--orange);border-radius:3px;"></div></div><span style="font-size:14px;color:var(--muted);width:50px;">fort</span></div>
             <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:15px;color:var(--muted);width:88px;flex-shrink:0;text-align:right;">War Risk</span><div style="flex:1;height:16px;background:var(--surface2);border-radius:3px;overflow:hidden;"><div style="width:92%;height:100%;background:var(--orange);border-radius:3px;"></div></div><span style="font-size:14px;color:var(--muted);width:50px;">fort</span></div>
           </div>
-          <p style="font-size:14px;color:var(--muted);margin:14px 0 0;font-style:italic;line-height:1.6;">« Piraterie » se situe entre vocabulaire maritime, cinématographique et informatique. Avec ces voisins, le mécanisme d’attention renforce ses dimensions maritimes.</p>
+          <p style="font-size:14px;color:var(--muted);margin:14px 0 0;font-style:italic;line-height:1.6;">La représentation vectorielle interne de « piraterie » est déplacée vers une région associée au transport maritime et aux risques géopolitiques. Le sens est recalculé dynamiquement à chaque couche.</p>
         </div>
         <div style="background:var(--surface2);border-radius:var(--radius-lg);padding:22px 28px;border:1px solid var(--border);">
-          <p style="font-size:16px;color:var(--text);line-height:1.7;margin:0;">Ce recalcul est refait à chaque nouvelle phrase. Le prompt ne modifie pas les adresses de base : il modifie les activations internes pendant le calcul, sans changer définitivement les paramètres du modèle.</p>
+          <p style="font-size:16px;color:var(--text);line-height:1.7;margin:0 0 10px;">Ce recalcul est refait à chaque nouveau token généré. Le prompt ne reprogramme pas l’IA : il influence seulement ses calculs internes pendant la réponse.</p>
         </div>
       </div>
     </div>
 
-    <!-- ÉTAPE 4 : PRÉDICTION -->
+        <!-- ÉTAPE 4 : PRÉDICTION -->
     <div style="display:grid;grid-template-columns:80px 1fr;gap:24px;margin-bottom:40px;">
       <div style="display:flex;flex-direction:column;align-items:center;">
         <div style="width:48px;height:48px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:var(--navy);flex-shrink:0;">4</div>
       </div>
       <div style="margin-top:13px;">
         <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin:0 0 8px;">Prédiction</p>
-        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0;">Le modèle utilise ces représentations contextuelles pour prédire, un token après l’autre, le token suivant le plus probable.</p>
+        <p style="font-size:19px;color:var(--text);line-height:1.75;margin:0 0 16px;">À partir des représentations calculées, le modèle prédit le token suivant le plus probable. Il recommence : il reprend tout le contexte, recalcule, prédit le token d’après. Et ainsi de suite, jusqu’à compléter la réponse.</p>
+        <div style="background:var(--accent2-dim);border-left:3px solid var(--blue);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;">
+          <p style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:0 0 8px;">Rôle du prompt</p>
+          <p style="font-size:16px;color:var(--text);line-height:1.7;margin:0;">Le prompt ne modifie pas le modèle. Il fournit le contexte de départ qui oriente tous les calculs. Changer le prompt, c’est changer les probabilités de sortie, sans toucher au modèle lui-même.</p>
+        </div>
       </div>
     </div>
 
@@ -2403,7 +2417,7 @@
 </div>
 <div class="page page-core" id="page-bloc1-consequences">
   <div class="module-hero">
-    <div class="module-tag">Bloc 1 · 10 min</div>
+    <div class="module-tag">Bloc 1</div>
     <h1 class="module-title">Le mot « piraterie » : <em>combien de chiffres par IA</em></h1>
     <p class="module-desc">Chaque IA encode ce mot en une liste de nombres. Plus la liste est longue, plus les nuances sont capturées. Mais longueur ne veut pas dire précision : la qualité des données d'entraînement compte autant que la taille.</p>
   </div>
@@ -2703,7 +2717,7 @@
 </div>
 <div class="page page-core" id="page-bloc2-outils">
   <div class="module-hero">
-    <div class="module-tag">Bloc 2 · 20 min</div>
+    <div class="module-tag">Bloc 2</div>
     <h1 class="module-title">Plusieurs IA. <em>Des usages différents.</em></h1>
     <p class="module-desc">Choisir le bon outil est une compétence. Cliquez sur un outil pour le détail.</p>
   </div>
@@ -2952,7 +2966,7 @@
 
 <div class="page page-core" id="page-bloc2-decision">
   <div class="module-hero">
-    <div class="module-tag">Bloc 2 · 20 min</div>
+    <div class="module-tag">Bloc 2</div>
     <h1 class="module-title">3 questions <em>pour choisir</em></h1>
     <p class="module-desc">Répondez dans l'ordre. La première réponse « oui » donne l'outil.</p>
   </div>
@@ -2970,7 +2984,7 @@
 <!-- ═══ BLOC 3 : ZONES ═══ -->
 <div class="page page-core" id="page-bloc3-zones">
   <div class="module-hero">
-    <div class="module-tag">Bloc 3 · 15 min</div>
+    <div class="module-tag">Bloc 3</div>
     <h1 class="module-title">Les 3 zones</h1>
     <p class="module-desc">Toute tâche IA tombe dans une de ces trois zones. La zone détermine le niveau de contrôle humain nécessaire.</p>
   </div>
@@ -3017,7 +3031,7 @@
     </div>
   </div>
   
-    <div class="module-tag">Bloc 3 · 15 min</div>
+    <div class="module-tag">Bloc 3</div>
     <h1 class="module-title">Copilot <em>ce qu'il fait, ce qu'il ne fait pas</em></h1>
     <p class="module-desc">Copilot travaille sur vos données internes M365. Ce n'est pas une raison de lui faire confiance sans relire.</p>
   </div>
@@ -3066,7 +3080,7 @@
 <!-- ═══ BLOC 3 : EXERCICE ═══ -->
 <div class="page page-core" id="page-bloc3-exercice">
   <div class="module-hero">
-    <div class="module-tag">Bloc 3 · 15 min</div>
+    <div class="module-tag">Bloc 3</div>
     <h1 class="module-title">Exercice <em>classez ces tâches</em></h1>
     <p class="module-desc">Pour chaque tâche, choisissez une zone. Pas de bonne ou mauvaise réponse d'emblée : c'est le débat qui compte.</p>
   </div>
@@ -3077,7 +3091,7 @@
 <!-- ═══ ESPRIT CRITIQUE ═══ -->
 <div class="page page-core" id="page-esprit-critique">
   <div class="module-hero">
-    <div class="module-tag">Esprit critique · 15 min</div>
+    <div class="module-tag">Esprit critique</div>
     <h1 class="module-title">Travailler avec l’IA : <em>5 réflexes</em></h1>
     <p class="module-desc">Ces réflexes s'appliquent à chaque tâche, quel que soit l'outil. Cliquez sur un réflexe pour le détail.</p>
   </div>
@@ -3096,7 +3110,7 @@
     </div>
   </div>
   
-    <div class="module-tag">Esprit critique · 15 min</div>
+    <div class="module-tag">Esprit critique</div>
     <h1 class="module-title">Relire un texte IA : <em>pas si simple</em></h1>
     <p class="module-desc">Le texte est fluide. Il semble juste. C'est exactement le piège.</p>
   </div>
@@ -3232,7 +3246,7 @@
     </div>
   </div>
   
-    <div class="module-tag">Esprit critique · 15 min</div>
+    <div class="module-tag">Esprit critique</div>
     <h1 class="module-title">Prompts <em>de relecture</em></h1>
     <p class="module-desc">A utiliser avec Claude ou ChatGPT après qu'une première IA a produit le document.</p>
   </div>
@@ -3303,7 +3317,7 @@ Conclus par :
 <!-- ═══ BLOC 4 : CAS BROKERS ═══ -->
 <div class="page page-core" id="page-bloc4-cas">
   <div class="module-hero">
-    <div class="module-tag">Bloc 4 · 20 min</div>
+    <div class="module-tag">Bloc 4</div>
     <h1 class="module-title">3 cas <em>concrets BRS</em></h1>
     <p class="module-desc">Pour chaque cas : le contexte, le prompt à utiliser, ce qu'on attend.</p>
   </div>
@@ -4073,7 +4087,7 @@ Conclus par :
 <!-- ═══ NIVEAUX D'AUTONOMIE ═══ -->
 <div class="page page-core" id="page-niveaux-agents">
   <div class="module-hero">
-    <div class="module-tag">Repères · 10 min</div>
+    <div class="module-tag">Repères</div>
     <h1 class="module-title">L'écosystème IA · <em>5 niveaux d'autonomie</em></h1>
     <p class="module-desc">Le terme "agent IA" recouvre des réalités très différentes. Cette grille, basée sur le degré d'autonomie opérationnelle, permet de s'y repérer.</p>
   </div>
