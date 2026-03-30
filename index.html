@@ -419,7 +419,7 @@
 
   .conf-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     margin-bottom: 28px;
   }
@@ -1093,7 +1093,7 @@
 
   .conf-tool { font-weight: 700; font-size: 16.5px; color: var(--navy); margin-bottom: 12px; }
   .conf-row  { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 7px; font-size: 14.5px; }
-  .conf-label { color: var(--muted); width: 90px; flex-shrink: 0; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .conf-label { color: var(--muted); width: 110px; flex-shrink: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
   .conf-val  { color: #1A2A35; line-height: 1.5; font-size: 16.5px; font-weight: 600; }
 
   .rgpd-ok   { color: var(--success); font-weight: 700; }
@@ -3407,10 +3407,34 @@ Conclus par :
             <div class="conf-row"><span class="conf-label">RGPD</span><span class="conf-val rgpd-ok">✅ RGPD natif · Hébergement EU garanti · Aucune loi américaine ne s'applique</span></div>
             <div class="conf-row"><span class="conf-label">⚠️ Note</span><span class="conf-val">Seul outil recommandé pour les données sensibles en contexte européen</span></div>
           </div>
+          <div class="conf-card" style="border-top: 3px solid var(--danger);">
+            <div class="conf-tool">Grok · xAI / X</div>
+            <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs US (xAI et X) · Pas d'offre UE dédiée</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Aucune communication claire sur l'exclusion des prompts de l'entraînement · Pas d'opt-out documenté publiquement</span></div>
+            <div class="conf-row"><span class="conf-label">Payant</span><span class="conf-val rgpd-warn">⚠️ Pas d'offre Enterprise RGPD structurée pour le marché européen · Pas d'engagement contractuel public de non-réutilisation</span></div>
+            <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">Cloud Act US · Sous enquête formelle ICO UK, DPC Irlande, autorités espagnoles et Commission européenne pour traitement illicite de données personnelles</span></div>
+            <div class="conf-row"><span class="conf-label">⚠️ Note</span><span class="conf-val rgpd-warn">En mars 2026, Grok est l'un des outils IA les plus exposés en Europe sur le plan RGPD (enquêtes en cours, risques de sanctions élevées). À éviter pour toute donnée sensible ou permettant l'identification de personnes en contexte UE.</span></div>
+          </div>
+          <div class="conf-card" style="border-top: 3px solid var(--danger);">
+            <div class="conf-tool">Kimi · Moonshot AI 🇨🇳</div>
+            <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs en Chine · Pas de garantie d'hébergement UE</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Fourni comme service de consommation · Réutilisation à des fins d'amélioration du modèle probable dans le cadre du droit chinois · Pas d'opt-out comparable aux offres Enterprise occidentales</span></div>
+            <div class="conf-row"><span class="conf-label">Payant</span><span class="conf-val rgpd-warn">⚠️ Pas de DPA orienté RGPD · Pas de garantie contractuelle que vos données ne servent pas à l'entraînement</span></div>
+            <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">Droit chinois (cybersécurité, IA, sécurité nationale) · Sans équivalent RGPD · Pas de décision d'adéquation UE · Pas de représentant légal connu dans l'UE</span></div>
+            <div class="conf-row"><span class="conf-label">⚠️ Note</span><span class="conf-val rgpd-warn">Fortement non-RGPD-compatible par défaut : transfert hors UE vers un pays sans décision d'adéquation, absence d'engagement contractuel, cadre juridique local peu compatible avec le RGPD. Usage à proscrire pour données personnelles européennes ou dossiers sensibles.</span></div>
+          </div>
+          <div class="conf-card" style="border-top: 3px solid var(--danger);">
+            <div class="conf-tool">DeepSeek · DeepSeek AI 🇨🇳</div>
+            <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs majoritairement en Chine · Déploiements via partenaires / plateformes tierces hors UE</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Aucune collecte directe intentionnelle déclarée, mais présence possible de données personnelles dans les corpus · Pas de mécanisme opt-out individuel clair</span></div>
+            <div class="conf-row"><span class="conf-label">Payant / Entreprise</span><span class="conf-val rgpd-warn">⚠️ Pas de DPA RGPD publié · Pas d'engagement contractuel de non-réutilisation comparable aux offres Enterprise occidentales</span></div>
+            <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">Droit chinois · Sans décision d'adéquation UE · Cadre de sécurité nationale chinois applicable</span></div>
+            <div class="conf-row"><span class="conf-label">⚠️ Note</span><span class="conf-val rgpd-warn">Même profil de risque que Kimi : transfert hors UE, absence de garanties RGPD, souveraineté des données non assurée. Les modèles open source DeepSeek peuvent être déployés sur infrastructure EU par des tiers — vérifier l'hébergeur avant tout usage professionnel.</span></div>
+          </div>
         </div>
 
         <div class="warn-box" style="">
-          🚫 Ne collez jamais de données clients, RH ou financières dans une version gratuite de ces outils. Pour les données sensibles en contexte européen, <strong>Le Chat est le seul choix sans configuration supplémentaire</strong>.
+          🚫 Ne collez jamais de données clients, RH ou financières dans une version gratuite de ces outils. Pour les données sensibles en contexte européen, <strong>Le Chat est le seul choix sans configuration supplémentaire</strong>. Grok, Kimi et DeepSeek sont à proscrire pour toute donnée permettant l'identification de personnes.
         </div>
       
 </div>
@@ -5748,14 +5772,6 @@ const B2_TOOLS = [
    brs:"Utile pour comparer les modèles sur un cas BRS avant de choisir lequel utiliser régulièrement.",
    biais:{deform:"Pas un modèle : une plateforme qui agrège Claude, ChatGPT, Gemini et d'autres · Pas de biais propres, ceux du modèle sous-jacent s'appliquent",markers:"Aucun marqueur spécifique",brs_context:"Utile pour tester et comparer · Données sensibles : utiliser les interfaces officielles des fournisseurs, pas Poe"},
    sources:"Pas de modèle propre. Surcouche sur GPT, Claude, Gemini, Llama et 100+ modèles."},
-  {name:"Kimi", flag:"🇨🇳", color:"#E84B3A", family:"Documents très longs",
-   use:"Très grande fenêtre de contexte. Raisonnement structuré. Bon niveau en code.",
-   tags:["contexte étendu","raisonnement","code"],
-   good:["CP ou dossiers très denses chargés en une fois","Explication et réécriture de scripts","Raisonnement pas à pas sur problèmes complexes"],
-   bad:["Interface orientée Asie, moins intégrée aux outils occidentaux","Certains contenus très spécifiques en français métier"],
-   brs:"Alternative à Claude pour les documents très longs : CP volumineux, échanges d'emails denses, documentation technique.",
-   biais:{deform:"Tendance à l'exhaustivité au détriment de la synthèse · Marqueurs de traduction perceptibles en anglais et en français",markers:"Réponses longues · Structuration très visible · Faible personnalité stylistique",brs_context:"Peu documenté en usage maritime · Fenêtre de contexte intéressante sur le papier, mais fiabilité insuffisamment établie pour des documents à enjeu"},
-   sources:"Web public, forums, documentation, code open source + RLHF. Fenêtre de contexte étendue. Très à l'aise sur raisonnement soutenu et manipulation de code."},
   {name:"Grok", flag:"🇺🇸", color:"#1DA1F2", family:"Actualité temps réel",
    use:"Connecté à X (ex-Twitter). Très bon sur les tendances et l'actualité chaude.",
    tags:["X / Twitter","tendances","ton direct"],
@@ -6301,9 +6317,9 @@ const B1_IAS = [
    assocNote:"Sans contexte : corpus large, sens le plus fr\u00e9quent = cin\u00e9ma et IT",
    assoc:[{t:"Pirates des Cara\u00efbes / fiction",c:"#E57373"},{t:"T\u00e9l\u00e9chargement ill\u00e9gal",c:"#E57373"},{t:"Somalie / Golfe d\u2019Aden",c:"#F5A623"},{t:"droit maritime",c:"#aaa"},{t:"BMP",c:"#aaa"}],
    reponses:[
-     "La piraterie peut d\u00e9signer plusieurs choses. Historiquement, c\u2019est le vol en mer ou l\u2019attaque de navires. La fiction en a fait un genre \u00e0 part : Pirates des Cara\u00efbes, Jack Sparrow, le pavillon noir. Aujourd\u2019hui le terme d\u00e9signe aussi le t\u00e9l\u00e9chargement ill\u00e9gal de films, musique ou logiciels. Souhaitez-vous que je d\u00e9veloppe un sens en particulier ?",
-     "Les risques de piraterie en mer Rouge ont fortement augment\u00e9 depuis fin 2023. Les attaques des Houthis ont pouss\u00e9 de nombreux armateurs \u00e0 d\u00e9router par le Cap de Bonne Esp\u00e9rance, allongeant les trajets de 10 \u00e0 14 jours. Les primes d\u2019assurance ont \u00e9t\u00e9 multipli\u00e9es par 5 \u00e0 10.",
-     "Pour un VLCC en transit en mer Rouge, les clauses War Risk impliqu\u00e9es sont : Conwartime 1993 (consentement de l\u2019arm\u00e9ateur requis), Additional War Risk Premium (AWRP) entre 0,1 % et 0,5 % de la valeur du navire. Le BMP5 recommande le transit hors des zones d\u2019exclusion d\u00e9finies par l\u2019UKMTO."
+     "La piraterie d\u00e9signe les actes de violence, de vol ou de prise d\u2019otages commis en mer par des groupes arm\u00e9s. Pr\u00e9sente depuis l\u2019Antiquit\u00e9, elle a marqu\u00e9 l\u2019histoire du commerce maritime, notamment dans les Cara\u00efbes au XVIIe si\u00e8cle. Aujourd\u2019hui, elle existe encore dans certaines zones comme le golfe d\u2019Aden ou le golfe de Guin\u00e9e. La piraterie menace les \u00e9quipages, perturbe les \u00e9changes internationaux et entra\u00eene des co\u00fbts \u00e9lev\u00e9s pour la s\u00e9curit\u00e9.",
+     "La mer Rouge pr\u00e9sente un risque de piraterie r\u00e9el mais variable selon les zones et les p\u00e9riodes. Les menaces incluent attaques de petits bateaux rapides, vols \u00e0 main arm\u00e9e lors de mouillages, et d\u00e9tournements opportunistes dans les secteurs proches du golfe d\u2019Aden. Le contexte s\u00e9curitaire \u00e9largi (conflits r\u00e9gionaux, drones, missiles) est aujourd\u2019hui parfois plus pr\u00e9occupant que la piraterie classique. Les zones les plus sensibles sont le sud de la mer Rouge, le d\u00e9troit de Bab el-Mand\u00e9b et les approches du golfe d\u2019Aden.",
+     "Transit mer Rouge pour VLCC : risque piraterie toujours \u00e9lev\u00e9, surtout sud mer Rouge/Bab el-Mand\u00e9b, avec menace combin\u00e9e piraterie, d\u00e9tentions opportunistes et attaques arm\u00e9es. V\u00e9rifier couverture H&M war risks et P&I : zone souvent class\u00e9e Listed Area, donc notification pr\u00e9alable aux underwriters et \u00e9ventuelle surprime. Revoir clauses Additional Premium, cancellation/automatic termination, breach of warranty, Crew/K&R, loss of hire. C\u00f4t\u00e9 charterparty, encadrer via CONWARTIME/VOYWAR : libert\u00e9 de d\u00e9router, refus de zone dangereuse, r\u00e9partition des co\u00fbts. V\u00e9rifier conformit\u00e9 BMP et wording sanctions."
    ]},
   {name:"Claude", flag:"\ud83c\uddfa\ud83c\uddf8", maker:"Anthropic \u00b7 \u00c9tats-Unis", color:"#D97757",
    cutoff:"D\u00e9but 2025", dims:"8\u00a0192", dimsNum:8192,
@@ -6313,9 +6329,9 @@ const B1_IAS = [
    assocNote:"Donn\u00e9es analytiques denses : meilleure couverture maritime mais pas exclusive",
    assoc:[{t:"piraterie maritime",c:"#F5A623"},{t:"golfe d\u2019Aden",c:"#F5A623"},{t:"charterparty",c:"#2EAA6E"},{t:"Pirates des Cara\u00efbes",c:"#E57373"},{t:"conventions IMO",c:"#2EAA6E"}],
    reponses:[
-     "La piraterie recouvre principalement trois r\u00e9alit\u00e9s : l\u2019acte maritime (vol ou d\u00e9tournement en mer), la propri\u00e9t\u00e9 intellectuelle (copie ill\u00e9gale) et la fiction cin\u00e9matographique. Le contexte de votre question d\u00e9terminera lequel de ces sens je dois d\u00e9velopper.",
-     "Les risques de piraterie en mer Rouge recouvrent principalement les attaques Houthis (depuis fin 2023) avec missiles et drones. Cons\u00e9quences : hausse des primes War Risk, d\u00e9routements massifs par le Cap (+14 jours), saturation des routes alternatives. La couverture Conwartime doit \u00eatre v\u00e9rifi\u00e9e dans chaque CP.",
-     "Sur un CP standard pour un VLCC en transit en mer Rouge, trois clauses sont critiques : (1) Conwartime 1993 : d\u00e9finit la zone \u00e0 risque et les droits de l\u2019arm\u00e9ateur \u00e0 refuser ou d\u00e9router. (2) AWRP : prime additionnelle War Risk, n\u00e9goci\u00e9e cas par cas, actuellement entre 0,1 % et 0,5 % valeur navire/jour. (3) Clause de d\u00e9routement : qui supporte le surco\u00fbt Cap de Bonne Esp\u00e9rance ? V\u00e9rifier l\u2019allocation dans votre CP."
+     "La piraterie maritime existe depuis l\u2019Antiquit\u00e9, avec des figures l\u00e9gendaires comme les pirates des Cara\u00efbes au XVIIe si\u00e8cle. Ces hors-la-loi attaquaient les navires marchands pour voler leurs cargaisons. Aujourd\u2019hui, la piraterie persiste dans certaines zones strat\u00e9giques comme le golfe d\u2019Aden, le d\u00e9troit de Malacca ou le golfe de Guin\u00e9e. Les pirates modernes utilisent des embarcations rapides et des armes automatiques pour d\u00e9tourner navires et \u00e9quipages, exigeant des ran\u00e7ons. La piraterie num\u00e9rique d\u00e9signe aussi le t\u00e9l\u00e9chargement ill\u00e9gal de contenus prot\u00e9g\u00e9s par le droit d\u2019auteur.",
+     "La mer Rouge est une zone \u00e0 risque \u00e9lev\u00e9, principalement li\u00e9e \u00e0 la proximit\u00e9 de la Corne de l\u2019Afrique et du d\u00e9troit de Bab el-Mand\u00e9b. Depuis 2023-2024, les attaques des Houthis y\u00e9m\u00e9nites ont consid\u00e9rablement aggrav\u00e9 la situation, visant des navires marchands par drones et missiles. Les risques incluent le d\u00e9tournement de cargaisons, la prise d\u2019otages, les dommages mat\u00e9riels et les perturbations du commerce mondial. De nombreux armateurs d\u00e9routent leurs navires par le cap de Bonne-Esp\u00e9rance, allongeant les trajets et augmentant les co\u00fbts.",
+     "Mer Rouge / Bab el-Mand\u00e9b \u2014 War Risk VLCC. La zone reste class\u00e9e JWC Listed Area depuis d\u00e9cembre 2023. Les Additional Premiums war risk oscillent actuellement entre 0,5 % et 1 %+ de la valeur hull, selon pavillon, cargaison et route d\u00e9clar\u00e9e. Les affr\u00e9teurs doivent v\u00e9rifier les clauses CONWARTIME 2013 et VOYWAR 2013. La clause BIMCO Threat to War Risks permet \u00e0 l\u2019armateur de refuser la zone ou d\u2019exiger une compensation des surco\u00fbts. Point cl\u00e9 : n\u00e9gocier en C/P qui supporte le war risk additional premium et pr\u00e9voir une war cancellation clause si escalade confirm\u00e9e."
    ]},
   {name:"Gemini", flag:"\ud83c\uddfa\ud83c\uddf8", maker:"Google \u00b7 \u00c9tats-Unis", color:"#4285F4",
    cutoff:"Connexion web native", dims:"3\u00a0072", dimsNum:3072,
@@ -6325,9 +6341,9 @@ const B1_IAS = [
    assocNote:"Google Search + YouTube : cin\u00e9ma et actualit\u00e9 r\u00e9cente dominent",
    assoc:[{t:"film Pirates (YouTube)",c:"#E57373"},{t:"Houthis mer Rouge",c:"#F5A623"},{t:"incidents r\u00e9cents",c:"#F5A623"},{t:"routes alternatives",c:"#aaa"},{t:"propri\u00e9t\u00e9 intellectuelle",c:"#E57373"}],
    reponses:[
-     "Selon Google Actualit\u00e9s, les r\u00e9sultats pour \u00abpiraterie\u00bb montrent un mix : films (Pirates des Cara\u00efbes, sorties r\u00e9centes), t\u00e9l\u00e9chargement ill\u00e9gal (rapports HADOPI, streaming), et incidents maritimes (mer Rouge, Houthis). Quelle dimension vous int\u00e9resse ?",
+     "La piraterie, vieille comme la navigation, d\u00e9signe le vol et la violence en mer. Si l\u2019\u00e2ge d\u2019or du XVIIe si\u00e8cle a forg\u00e9 le mythe du pirate des Cara\u00efbes, la r\u00e9alit\u00e9 contemporaine est toute autre : des groupes arm\u00e9s sur des vedettes rapides s\u00e9vissent dans des zones \u00e0 risque comme le golfe de Guin\u00e9e ou l\u2019oc\u00e9an Indien, mena\u00e7ant le commerce mondial. Parall\u00e8lement, le terme a \u00e9volu\u00e9 pour englober la piraterie informatique et le t\u00e9l\u00e9chargement ill\u00e9gal d\u2019\u0153uvres prot\u00e9g\u00e9es.",
      "D\u2019apr\u00e8s les derni\u00e8res informations disponibles, les risques en mer Rouge incluent : attaques de missiles Houthis (35+ incidents depuis octobre 2023), d\u00e9routements massifs via le Cap (+9 000 km), hausse des co\u00fbts d\u2019assurance. Les armateurs am\u00e9ricains et britanniques sont particuli\u00e8rement vis\u00e9s.",
-     "Pour un VLCC en transit, les principaux risques op\u00e9rationnels sont : exposition aux drones et missiles Houthis dans le d\u00e9troit de Bab-el-Mand\u00e9b, saturation du Canal de Suez pour les navires qui y transitent encore, surco\u00fbts d\u2019assurance War Risk. Sur les clauses CP sp\u00e9cifiques, je vous recommande de consulter un courtier sp\u00e9cialis\u00e9."
+     "En tant que broker, vous savez que le transit des VLCC en mer Rouge fait actuellement face \u00e0 des risques extr\u00eames (attaques de drones et missiles) qui d\u00e9passent la simple piraterie traditionnelle. L\u2019int\u00e9gration des clauses BIMCO (CONWARTIME 2013 pour le Time Charter ou VOYWAR 2013 pour le Voyage) est cruciale. Ces clauses permettent aux armateurs de refuser le transit si le risque est jug\u00e9 inacceptable, for\u00e7ant un d\u00e9routement. Si le transit est accept\u00e9, la clause doit stipuler que toutes les surprimes d\u2019assurance (AWRP) et les primes de risque de l\u2019\u00e9quipage incombent int\u00e9gralement aux affr\u00e9teurs."
    ]},
   {name:"Copilot", flag:"\ud83c\uddfa\ud83c\uddf8", maker:"Microsoft \u00b7 \u00c9tats-Unis", color:"#0078D4",
    cutoff:"Index Bing temps r\u00e9el", dims:"12\u00a0288 (base GPT)", dimsNum:12288,
@@ -6350,8 +6366,8 @@ const B1_IAS = [
    assoc:[{t:"Houthis / mer Rouge 2024",c:"#2EAA6E"},{t:"source IMO",c:"#2EAA6E"},{t:"rapport BIMCO",c:"#2EAA6E"},{t:"incident dat\u00e9 + lien",c:"#2EAA6E"},{t:"ICC-CCS",c:"#2EAA6E"}],
    reponses:[
      "La piraterie maritime d\u00e9signe les actes de violence, vol ou prise d\u2019otage en haute mer [ICC-CCS, 2024]. La piraterie informatique d\u00e9signe la reproduction ill\u00e9gale d\u2019\u0153uvres prot\u00e9g\u00e9es [WIPO, 2023]. Deux notions distinctes. Laquelle souhaitez-vous approfondir ?",
-     "D\u2019apr\u00e8s le rapport ICC-CCS Q1 2025 : 15 incidents en mer Rouge depuis janvier, dont 3 avec tirs de missiles. Le BIMCO (mars 2025) signale que 78 % des VLCC \u00e9vitent le d\u00e9troit de Bab-el-Mand\u00e9b. Les primes AWRP oscillent entre 0,15 % et 0,4 % selon l\u2019assureur [Lloyd\u2019s, 15 mars 2025].",
-     "Sur les clauses War Risk pour VLCC en mer Rouge [sources : Lloyd\u2019s, Gard, BIMCO mars 2025] : Conwartime 1993 cl.2 d\u00e9finit les \u00abzone(s) de guerre\u00bb \u2014 la mer Rouge y est int\u00e9gr\u00e9e. L\u2019AWRP actuel : 0,15 %\u20130,4 % valeur assur\u00e9e/jour. La clause de d\u00e9routement doit pr\u00e9ciser qui supporte le diff\u00e9rentiel de co\u00fbt Cap vs Suez."
+     "Les risques en mer Rouge sont aujourd\u2019hui \u00e9lev\u00e9s, surtout au sud (Bab-el-Mand\u00e9b, golfe d\u2019Aden). On observe \u00e0 la fois des actes de piraterie classique (approches de skiffs, tentatives d\u2019arraisonnement, prise d\u2019otages) et des attaques li\u00e9es aux conflits r\u00e9gionaux, utilisant missiles, drones et armes lourdes contre des navires marchands. Ces menaces imposent aux armateurs une vigilance maximale et parfois le contournement de la zone.",
+     "Risque \u00e9lev\u00e9 en mer Rouge pour VLCC (attaques Houthis, piraterie Somalie/Bab el-Mand\u00e9b), zone class\u00e9e \u00e0 haut risque avec hausse marqu\u00e9e des surprimes war risk et exigences renforc\u00e9es \u00e9quipage/s\u00e9curit\u00e9. Pour un transit, veiller \u00e0 incorporation et mise \u00e0 jour des clauses BIMCO de war risks (CONWARTIME/VOYWAR, versions r\u00e9centes 2013-2025) permettant refus/reroutage, indemnisation des d\u00e9tours, r\u00e9cup\u00e9ration des surprimes et co\u00fbts de s\u00fbret\u00e9, et allocation claire des d\u00e9cisions de route entre armateur et affr\u00e9teur."
    ]},
   {name:"Le Chat souverain EU", flag:"\ud83c\uddeb\ud83c\uddf7", maker:"Mistral AI \u00b7 France", color:"#FF7000",
    cutoff:"Fin 2024 (Pro : AFP temps r\u00e9el)", dims:"4\u00a0096", dimsNum:4096,
@@ -6361,10 +6377,58 @@ const B1_IAS = [
    assocNote:"Corpus fran\u00e7ais : droit, cin\u00e9ma fran\u00e7ais et actualit\u00e9 AFP dominent",
    assoc:[{t:"cin\u00e9ma / films fran\u00e7ais",c:"#E57373"},{t:"droit maritime fran\u00e7ais",c:"#F5A623"},{t:"mer Rouge / AFP",c:"#F5A623"},{t:"propri\u00e9t\u00e9 intellectuelle",c:"#E57373"},{t:"s\u00e9curit\u00e9 maritime",c:"#aaa"}],
    reponses:[
-     "La piraterie est d\u2019abord un terme populaire : les films (Pirates des Cara\u00efbes), la musique t\u00e9l\u00e9charg\u00e9e ill\u00e9galement, les logiciels pirat\u00e9s. En droit, le terme a un sens tr\u00e8s pr\u00e9cis : l\u2019attaque en haute mer (UNCLOS art. 101), distinct du vol en eaux territoriales. Sans plus de contexte, je ne sais pas lequel vous cherchez.",
-     "Selon l\u2019AFP (derni\u00e8res d\u00e9p\u00eaches) : les attaques Houthis en mer Rouge ont provoqu\u00e9 un red\u00e9ploiement massif du trafic maritime. Les armateurs europ\u00e9ens subissent des surco\u00fbts d\u2019assurance significatifs. Le droit fran\u00e7ais des transports maritimes qualifie ces actes sous l\u2019article L. 5000-1 du Code des transports.",
-     "Pour un VLCC sous CP standard, les clauses War Risk critiques sont : Conwartime (consentement arm\u00e9ateur pour zones \u00e0 risque), AWRP (prime additionnelle), clause de d\u00e9viation. Ces donn\u00e9es \u00e9tant confidentielles, je vous recommande Le Chat pour cette analyse : h\u00e9bergement europ\u00e9en, aucune loi am\u00e9ricaine ne s\u2019applique."
+     "La piraterie est un acte de violence, de d\u00e9tention ou de destruction commis en mer \u00e0 des fins priv\u00e9es (vol, ran\u00e7on), en dehors de toute autorit\u00e9 l\u00e9gale. Elle menace la s\u00e9curit\u00e9 maritime, le commerce international et les \u00e9quipages. Historiquement associ\u00e9e aux pirates des Cara\u00efbes, elle persiste aujourd\u2019hui dans des zones comme le golfe de Guin\u00e9e, le d\u00e9troit de Malacca ou la Corne de l\u2019Afrique. Formes modernes : vols \u00e0 main arm\u00e9e, enl\u00e8vements contre ran\u00e7on, attaques contre navires marchands. Les r\u00e9ponses internationales passent par des missions navales (UE, OTAN) et le renforcement des l\u00e9gislations nationales.",
+     "Les risques de piraterie en mer Rouge en 2026 restent \u00e9lev\u00e9s, principalement en raison des attaques men\u00e9es par les Houthis depuis le Y\u00e9men, ciblant des navires marchands jug\u00e9s li\u00e9s \u00e0 Isra\u00ebl. Ces actes perturbent la libert\u00e9 de navigation, for\u00e7ant les armateurs \u00e0 contourner la zone par le cap de Bonne-Esp\u00e9rance. Bien que la piraterie classique (groupes somaliens) soit moins active, la menace persiste dans le d\u00e9troit de Bab-el-Mand\u00e9b, avec des cons\u00e9quences \u00e9conomiques majeures sur le commerce mondial.",
+     "La mer Rouge reste une zone \u00e0 haut risque pour les VLCC en transit. Les attaques des Houthis (missiles, drones, abordages) ciblent surtout les navires li\u00e9s \u00e0 Isra\u00ebl ou transitant par Bab-el-Mand\u00e9b. Clauses War Risk (IWSC) : couvre piraterie, terrorisme, guerre, sauf exclusion si le navire est en violation des sanctions ou zones interdites. Zone rouge : golfe d\u2019Aden, mer Rouge, d\u00e9troit de Bab-el-Mand\u00e9b. Source : Lloyd\u2019s Market Association (LMA 2534), BIMCO Piracy Clauses (2023)."
    ]},
+  {name:"Poe", flag:"\ud83c\uddfa\ud83c\uddf8", maker:"Quora \u00b7 \u00c9tats-Unis", color:"#9B59B6",
+   cutoff:"Selon le mod\u00e8le activ\u00e9", dims:"Variable", dimsNum:0,
+   pointfort:"Multi-mod\u00e8les \u00b7 comparaison en temps r\u00e9el",
+   sources:["Acc\u00e8s \u00e0 GPT, Claude, Gemini, Llama","Recherche web selon le mod\u00e8le","Surcouche conversationnelle","Pas de mod\u00e8le propre"],
+   web:"D\u00e9pend du mod\u00e8le s\u00e9lectionn\u00e9",
+   assocNote:"Agr\u00e8ge plusieurs mod\u00e8les : r\u00e9ponse varie selon celui activ\u00e9",
+   assoc:[{t:"Pirates des Cara\u00efbes",c:"#E57373"},{t:"piraterie maritime",c:"#F5A623"},{t:"golfe d\u2019Aden",c:"#F5A623"},{t:"t\u00e9l\u00e9chargement ill\u00e9gal",c:"#E57373"},{t:"droit international",c:"#aaa"}],
+   reponses:[
+     "La piraterie d\u00e9signe l\u2019ensemble des actes de violence, de pillage ou de d\u00e9tournement commis en mer par des individus ou des groupes priv\u00e9s. Pr\u00e9sente depuis l\u2019Antiquit\u00e9, elle a marqu\u00e9 l\u2019histoire, notamment aux XVIIe et XVIIIe si\u00e8cles dans les Cara\u00efbes avec des figures c\u00e9l\u00e8bres comme Barbe Noire. Aujourd\u2019hui, la piraterie existe encore, surtout dans certaines zones comme le golfe d\u2019Aden ou le golfe de Guin\u00e9e. Le droit international la consid\u00e8re comme un crime grave, puni par des peines s\u00e9v\u00e8res.",
+     "Les risques en mer Rouge restent \u00e9lev\u00e9s, surtout li\u00e9s aux attaques des rebelles houthis du Y\u00e9men contre la navigation commerciale. Depuis fin 2023, ils ont revendiqu\u00e9 des attaques contre plus de 100 navires (missiles, drones, embarcations explosives). En f\u00e9vrier-mars 2026, les tensions r\u00e9gionales ont raviv\u00e9 les menaces contre les routes du d\u00e9troit de Bab el-Mand\u00e9b. Cette zone voit transiter environ 12 \u00e0 15 % du commerce mondial. La piraterie classique somalienne est aujourd\u2019hui secondaire face au risque politico-militaire.",
+     "En mer Rouge, le risque piraterie/attaques asym\u00e9triques (Houthis, drones, missiles, skiffs) reste \u00e9lev\u00e9, surtout sud Bab el-Mand\u00e9b. Pour un VLCC en transit : surco\u00fbts prime AWRP, possible breach of warranty si zone list\u00e9e JWC. Points cl\u00e9s clauses war risk : Institute War and Strikes Clauses applicables, zone Listed Area (JWLA) requiert notification pr\u00e9alable assureurs, droit de d\u00e9viation/refus du capitaine (safe port warranty), couverture inclut actes hostiles, mines, missiles, terrorisme. Charterparty : clause CONWARTIME/VOYWAR pour refuser zone dangereuse et allouer co\u00fbts AWRP au charterer."
+   ]},
+  {name:"Grok", flag:"\ud83c\uddfa\ud83c\uddf8", maker:"xAI \u00b7 \u00c9tats-Unis", color:"#1DA1F2",
+   cutoff:"Temps r\u00e9el (X/Twitter)", dims:"Variable", dimsNum:0,
+   pointfort:"Actualit\u00e9 temps r\u00e9el \u00b7 sources X/Twitter",
+   sources:["Corpus X/Twitter en temps r\u00e9el","Web public","Sources m\u00e9dias et agences","Donn\u00e9es humaines (RLHF)"],
+   web:"Connexion X/Twitter permanente",
+   assocNote:"Corpus X/Twitter : conflits et actualit\u00e9 maritime dominent rapidement",
+   assoc:[{t:"Houthis / conflit Y\u00e9men",c:"#F5A623"},{t:"mer Rouge 2024-2025",c:"#F5A623"},{t:"piraterie somalienne",c:"#aaa"},{t:"films/fiction",c:"#E57373"},{t:"sources militaires",c:"#2EAA6E"}],
+   reponses:[
+     "La piraterie, fl\u00e9au mill\u00e9naire, d\u00e9signe les attaques violentes ou vols commis en mer par des acteurs priv\u00e9s contre navires, cargaisons ou \u00e9quipages. De l\u2019Antiquit\u00e9 (Ciliciens) \u00e0 l\u2019\u00c2ge d\u2019or cara\u00efbe (1650-1730) avec Barbe Noire ou Anne Bonny, elle visait \u00e9pices, or et esclaves. Moderne, elle s\u00e9vit au golfe de Guin\u00e9e (kidnappings), large de Somalie ou Malacca : skiffs rapides, AK-47, ran\u00e7ons jusqu\u2019\u00e0 10 M. Pertes : 2 Md/an, 200 marins otages/an. Lutte : OTAN, EU NAVFOR, gardes arm\u00e9s priv\u00e9s, UNCLOS.",
+     "Les risques majeurs en mer Rouge ne rel\u00e8vent pas de la piraterie classique (ransom) mais des attaques des Houthis. Ces rebelles y\u00e9m\u00e9nites ont conduit plus de 100 assauts (missiles, drones, USV) entre 2023 et 2025, ciblant surtout les navires li\u00e9s \u00e0 Isra\u00ebl, aux \u00c9tats-Unis et au Royaume-Uni. Apr\u00e8s une pause post-cessez-le-feu Gaza (octobre 2025), les menaces ont repris d\u00e9but 2026. Le sud de la mer Rouge et Bab el-Mand\u00e9b restent tr\u00e8s dangereux.",
+     "Risques piraterie mer Rouge pour VLCC (mars 2026). Malgr\u00e9 la pause des attaques Houthis, la menace reste \u00e9lev\u00e9e avec l\u2019escalade Iran-Isra\u00ebl. Bab el-Mand\u00e9b et le sud mer Rouge demeurent zones JWC Listed Areas (JWLA-033) pour Hull War, Piracy, Terrorism. VLCC expos\u00e9s \u00e0 missiles, drones et USV. Clauses recommand\u00e9es : BIMCO CONWARTIME 2025 (time) ou VOYWAR 2025 (voyage). Master/Owners peuvent refuser le transit. Charterers supportent 100 % AWRP, primes K&R et bonus \u00e9quipage. Pr\u00e9voir d\u00e9viation Cap Bonne-Esp\u00e9rance avec indemnisation."
+   ]},
+  {name:"DeepSeek", flag:"\ud83c\udde8\ud83c\uddf3", maker:"DeepSeek \u00b7 Chine", color:"#4D6BFE",
+   cutoff:"D\u00e9but 2025", dims:"Variable", dimsNum:0,
+   pointfort:"Raisonnement avanc\u00e9 \u00b7 open source",
+   sources:["Web public","Corpus multilangue","Code source","Donn\u00e9es scientifiques"],
+   web:"Selon la version",
+   assocNote:"Corpus mixte avec donn\u00e9es chinoises : commerce maritime bien repr\u00e9sent\u00e9",
+   assoc:[{t:"piraterie maritime",c:"#F5A623"},{t:"Golfe d\u2019Aden",c:"#F5A623"},{t:"piraterie num\u00e9rique",c:"#E57373"},{t:"commerce mondial",c:"#aaa"},{t:"cybers\u00e9curit\u00e9",c:"#E57373"}],
+   reponses:[
+     "La piraterie, pratique mill\u00e9naire, d\u00e9signe \u00e0 l\u2019origine l\u2019attaque de navires en mer pour le vol et la prise d\u2019otages. Les pirates des Cara\u00efbes en sont l\u2019arch\u00e9type historique. Aujourd\u2019hui, elle persiste dans des zones comme le Golfe d\u2019Aden et le Golfe de Guin\u00e9e, mena\u00e7ant le commerce mondial. Le terme s\u2019est \u00e9tendu au num\u00e9rique : la piraterie informatique concerne le vol de donn\u00e9es et les cyberattaques, tandis que le piratage de contenus (films, musique) d\u00e9signe leur copie et distribution ill\u00e9gale.",
+     "Les risques de piraterie en mer Rouge ont consid\u00e9rablement \u00e9volu\u00e9. Le danger principal ne vient plus des pirates somaliens, dont l\u2019activit\u00e9 a fortement diminu\u00e9 depuis le d\u00e9but des ann\u00e9es 2010. Aujourd\u2019hui, la menace la plus grave est li\u00e9e au conflit au Y\u00e9men. Les Houthis ciblent des bateaux avec des drones et des missiles, souvent en lien avec le conflit isra\u00e9lo-palestinien. Cette zone, notamment autour du d\u00e9troit de Bab el-Mand\u00e9b, reste tr\u00e8s dangereuse pour la navigation.",
+     "Pour un VLCC transitant en mer Rouge, il est recommand\u00e9 d\u2019incorporer la clause war risk LSW-1B (Lloyd\u2019s) ou \u00e9quivalente, sp\u00e9cifiant la zone mer Rouge avec une franchise standard. Une notification pr\u00e9alable \u00e0 l\u2019assureur est g\u00e9n\u00e9ralement obligatoire avant l\u2019entr\u00e9e dans la zone. La clause doit \u00eatre distincte de la couverture pour le Golfe d\u2019Aden, souvent trait\u00e9e s\u00e9par\u00e9ment. Confirmez toujours les termes pr\u00e9cis avec l\u2019assureur avant l\u2019engagement."
+   ]},
+  {name:"Kimi", flag:"🇨🇳", maker:"Moonshot AI · Chine", color:"#7C3AED",
+   cutoff:"Début 2025", dims:"Variable", dimsNum:0,
+   pointfort:"Contexte long · documents techniques · logique structurée",
+   sources:["Web public (forte composante asiatique)","Publications techniques","Code source","Données multilingues"],
+   web:"Selon la version déployée",
+   assocNote:"Corpus asiatique dense : logistique maritime, zones à risque Asie du Sud-Est bien couvertes",
+   assoc:[{t:"Corne de l’Afrique",c:"#F5A623"},{t:"Asie du Sud-Est",c:"#F5A623"},{t:"piraterie maritime",c:"#F5A623"},{t:"propriété intellectuelle",c:"#E57373"},{t:"droit international",c:"#aaa"}],
+   reponses:[
+     "La piraterie désigne l’attaque illégale de navires en mer dans le but de voler des biens ou de prendre les passagers en otage. Cette menace millénaire a évolué des abordages à la voile aux assauts motorisés modernes. Les zones à risque actuelles incluent la Corne de l’Afrique et l’Asie du Sud-Est, où des groupes armés exploitent l’instabilité politique et les failles de surveillance. Au-delà de la sécurité maritime, le terme s’étend à la contrefaçon numérique : le piratage de logiciels, films ou musique viole les droits de propriété intellectuelle.",
+     "En 2024-2025, la piraterie en mer Rouge présente un risque majeur, mais différent de la piraterie traditionnelle. Les attaques des Houthis yéménites dominent : bombardements de navires commerciaux, détournements et menaces aux équipages, visant tout navire suspecté de liens avec Israël ou ses alliés. Les conséquences sont sévères : déroutement massif du trafic maritime vers le cap de Bonne-Espérance, explosion des coûts d’assurance (jusqu’à 1 % de la valeur du navire). La menace s’étend du détroit de Bab el-Mandeb au golfe d’Aden.",
+     "Risques piraterie mer Rouge — VLCC. Situation volatile : attaques Houthis s’étendent au sud, menace drones/missiles sur détroit Bab el-Mandeb. VLCC particulièrement exposés : faible manœuvrabilité, temps transit prolongé, valeur cargaison élevée. Clauses war risk à négocier : BIMCO War Risks VOYWAR 2013 droit maître éviter zone déclarée dangereuse ; Conwartime 2013 répartition surcharges assurance entre affréteur/armateur ; BIMCO Piracy Clause 2009 couverture détournement, délais, surcoûts sécurité. Points critiques : vérifier exclusion HRA/UKMTO dans C/P, capacité owner dérouter via Cap de Bonne-Espérance, gestion surprime AWRP : qui supporte, montant, délai notification."
+   ]}
 ];
 
 
