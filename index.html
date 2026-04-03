@@ -2408,6 +2408,14 @@
       </div>
     </div>
 
+    <!-- FLATTERIE -->
+    <div style="margin-bottom:40px;">
+      <div style="background:var(--surface2);border-radius:var(--radius-lg);padding:22px 28px;border:1px solid var(--border);">
+        <p style="font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin:0 0 12px;">Ce mécanisme explique aussi la flatterie</p>
+        <p style="font-size:17px;color:var(--text);line-height:1.75;margin:0;">Quand vous écrivez quelque chose d'inattendu ou de légèrement provocateur, l'IA a été entraînée pour vous répondre par « J'adore », « Excellente question 👌 », « Vous avez raison ». Ce sont simplement des tokens statistiquement probables dans ce contexte précis. L'IA ne décide pas de vous flatter : elle calcule la suite la plus probable. Emoji inclus.</p>
+      </div>
+    </div>
+
     <!-- CONCLUSION -->
     <div style="background:var(--navy);border-radius:var(--radius-lg);padding:28px 32px;">
       <p style="font-size:19px;color:rgba(255,255,255,0.9);line-height:1.8;margin:0;font-style:italic;">Pour nous, cela ressemble à une phrase cohérente ; pour l’IA, ce ne sont que des calculs sur des coordonnées dans un espace de grande dimension.</p>
@@ -2508,10 +2516,10 @@
       <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(192,57,43,0.25);">
         <div style="padding:16px 22px;background:var(--danger);">
           <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">03</div>
-          <div style="font-size:22px;font-weight:800;color:#fff;line-height:1.3;">Il ne se corrige pas</div>
+          <div style="font-size:22px;font-weight:800;color:#fff;line-height:1.3;">La vitesse n'est pas un signal de fiabilité</div>
         </div>
         <div style="padding:20px 22px;background:var(--white);">
-          <p style="font-size:18px;color:var(--text);line-height:1.8;margin:0;">Il n'a pas de mécanisme interne qui détecte ses propres erreurs. <strong style="color:var(--danger);">Une réponse fausse sort avec la même fluidité qu'une réponse exacte.</strong> La relecture reste indispensable.</p>
+          <p style="font-size:18px;color:var(--text);line-height:1.8;margin:0;">L'IA répond (très) vite et bien. Instinctivement, on y voit de la compétence. C'est le piège : notre cerveau confond fluidité et exactitude. Ce que la vitesse signifie vraiment : le modèle enchaîne les mots les uns après les autres, sans jamais relire, sans recouper, sans s'arrêter. C'est pour cela qu'il est rapide. <strong style="color:var(--danger);">Un humain expert qui répond vite maîtrise son sujet. Une IA qui répond vite n'a simplement pas vérifié.</strong></p>
         </div>
       </div>
 
@@ -2581,12 +2589,13 @@
         </div>
         <div style="padding:22px 28px;">
           <div style="font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#B7791F;margin-bottom:12px;">Comment ça fonctionne</div>
-          <p style="font-size:19px;color:var(--text);line-height:1.85;margin:0;">Les modèles ont été entraînés à satisfaire l’évaluateur humain. Contredire frontalement était pénalisé pendant l’entraînement. La politesse est devenue structurelle. Résultat : ils approuvent facilement, nuancent sous pression et changent de position sans argument nouveau.</p>
+          <p style="font-size:19px;color:var(--text);line-height:1.85;margin:0;">Les modèles ont été entraînés à satisfaire l’évaluateur humain.</p>
+          <p style="font-size:19px;color:var(--text);line-height:1.85;margin:16px 0 0;">Deux mécanismes se cumulent. Les données d’entraînement contiennent une proportion élevée de flatterie conversationnelle issue de tutoriels, coaching, service client, forums : l’approbation y est structurellement surreprésentée. Le processus d’alignement amplifie ensuite cette configuration : pendant l’entraînement, des évaluateurs humains notent mieux les réponses agréables. Résultat : l’approbation est le comportement par défaut, pas une décision.</p>
         </div>
       </div>
       <div style="padding:22px 28px 22px 28px;padding-top:78px;background:var(--cream);">
         <div style="font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Dans le shipping</div>
-        <p style="font-size:19px;color:var(--text);line-height:1.85;margin:0;">Un broker ou un analyste doit tenir une ligne. L’IA a tendance à se rétracter si vous contestez une réponse, même sans argument solide. <strong>Ce biais est incompatible avec un métier de conviction.</strong> Une position de marché ou une contre-proposition ne se retire pas sous pression sociale.</p>
+        <p style="font-size:19px;color:var(--text);line-height:1.85;margin:0;">Un broker ou un analyste doit tenir une ligne sous pression commerciale. Un outil qui cède sans argument nouveau est inutile pour challenger une contre-offre ou défendre une position de marché. Si l’IA change d’avis quand vous insistez, c’est qu’elle optimise pour l’accord. Et non parce qu’elle avait tort avant.</p>
       </div>
     </div>
   </div>
@@ -3096,7 +3105,7 @@
     <p class="module-desc">Ces réflexes s'appliquent à chaque tâche, quel que soit l'outil. Cliquez sur un réflexe pour le détail.</p>
   </div>
   <div id="ec-piliers"></div>
-  <div class="warn-box" style="margin-top:14px;"><strong>À retenir</strong> L'IA travaille très vite, et livre un résultat bluffant. L'esprit critique, c'est ce qui fait la différence entre un résultat utilisable et un résultat dangereux.</div>
+  <div class="warn-box" style="margin-top:14px;"><strong>À retenir</strong> L'IA travaille très vite et livre un résultat bluffant. Mais la vitesse n'est pas un signe de certitude ou de justesse de l'information, c'est une propriété du calcul. Le modèle produit une réponse fausse à la même vitesse, avec le même ton assuré, que la réponse juste. Rien dans la forme ne signale l'erreur. <strong style="color:var(--orange);">L'esprit critique est ce qui fait la différence entre un résultat utilisable et un résultat dangereux.</strong></div>
 </div>
 
 <!-- ═══ RELECTURE ═══ -->
@@ -3147,7 +3156,7 @@
       </div>
 
       <div class="wtab-pane" id="rl2">
-        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Le texte a été soumis a une IA différente avec ce prompt : <em>"Analyse ce texte produit par une IA. Identifie toutes les erreurs factuelles, juridiques, techniques et rédactionnelles."</em></p>
+        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Le texte a été soumis à une IA différente avec ce prompt : <em>"Analyse ce texte produit par une IA. Identifie toutes les erreurs factuelles, juridiques, techniques et rédactionnelles."</em></p>
         <div class="diff-grid-f">
           <div class="diff-box-f" style="background:var(--surface2);">
             <div style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Vous (exercice)</div>
@@ -3167,7 +3176,7 @@
       </div>
 
       <div class="wtab-pane" id="rl3">
-        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">A utiliser avec Claude ou ChatGPT après qu’une première IA a produit le document.</p>
+        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">À utiliser avec Claude ou ChatGPT après qu’une première IA a produit le document.</p>
         <div class="widget-wrap">
             <div class="wtab-nav">
               <button class="wtab-btn on" onclick="wTab(this,'pr0')">Prompt expert</button>
@@ -3177,7 +3186,7 @@
             <div class="wtab-body">
         
               <div class="wtab-pane active" id="pr0">
-                <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Copiez, collez le texte a analyser a la fin.</p>
+                <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Copiez, collez le texte à analyser à la fin.</p>
                 <div class="prompt-expert-box" id="pr-expert-box"><span class="pe-kw">Tu es juriste shipping senior (oil & tanker market), expert en charter parties et analyse marché.</span>
         Ta mission est de produire une relecture critique structurée du document ci-dessous.
         
@@ -3203,11 +3212,11 @@
         
         Conclus par :
         - Une synthèse des risques principaux
-        - Les informations complémentaires a obtenir avant validation
+        - Les informations complémentaires à obtenir avant validation
         
         <span class="pe-ph">[COLLER LE TEXTE A ANALYSER ICI]</span></div>
                 <button class="copy-prompt-btn" onclick="copyEl('pr-expert-box')">Copier ce prompt</button>
-                <div class="tip-box" style="margin-top:14px;"><strong>Résultat attendu</strong> Une liste structurée de 10 a 20 points classés par gravité, avec les formulations exactes a corriger.</div>
+                <div class="tip-box" style="margin-top:14px;"><strong>Résultat attendu</strong> Une liste structurée de 10 à 20 points classés par gravité, avec les formulations exactes à corriger.</div>
                 <div class="warn-box"><strong>À retenir</strong> les règles impératives en début de prompt sont essentielles. Sans elles, l'IA comble les manques avec des données inventées plutôt que de signaler l'incertitude.</div>
               </div>
         
@@ -3215,9 +3224,9 @@
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
                   <div class="card-sm" style="border-top:3px solid var(--danger);"><strong style="font-size:18px;">Règles impératives</strong><p style="font-size:17px;margin-top:8px;">Sans ces règles, l'IA invente plutôt qu'admettre l'incertitude. Les balises [information insuffisante] forcent la transparence.</p></div>
                   <div class="card-sm" style="border-top:3px solid var(--blue);"><strong style="font-size:18px;">Le rôle précis</strong><p style="font-size:17px;margin-top:8px;">« Juriste shipping senior » oriente vers l'espace contractuel maritime. Sans rôle, l'IA reste généraliste.</p></div>
-                  <div class="card-sm" style="border-top:3px solid var(--success);"><strong style="font-size:18px;">La structure en 6 points</strong><p style="font-size:17px;margin-top:8px;">Oblige l'IA a passer en revue chaque catégorie d'erreur, y compris les oublis qu'elle ne signalerait pas spontanément.</p></div>
+                  <div class="card-sm" style="border-top:3px solid var(--success);"><strong style="font-size:18px;">La structure en 6 points</strong><p style="font-size:17px;margin-top:8px;">Oblige l'IA à passer en revue chaque catégorie d'erreur, y compris les oublis qu'elle ne signalerait pas spontanément.</p></div>
                   <div class="card-sm" style="border-top:3px solid var(--warn);"><strong style="font-size:18px;">La gravité</strong><p style="font-size:17px;margin-top:8px;">Sans elle, l'IA liste tout au même niveau. Savoir ce qui est critique vs mineur détermine ce que vous corrigez en priorité.</p></div>
-                  <div class="card-sm"><strong style="font-size:18px;">La conclusion forcée</strong><p style="font-size:17px;margin-top:8px;">Demander les « informations complémentaires » force l'IA a signaler ce qu'elle ne peut pas analyser.</p></div>
+                  <div class="card-sm"><strong style="font-size:18px;">La conclusion forcée</strong><p style="font-size:17px;margin-top:8px;">Demander les « informations complémentaires » force l'IA à signaler ce qu'elle ne peut pas analyser.</p></div>
                   <div class="card-sm"><strong style="font-size:18px;">La deuxième IA</strong><p style="font-size:17px;margin-top:8px;">Ce prompt est conçu pour être utilisé par une IA différente de celle qui a produit le texte. Les deux n'ont pas les mêmes biais.</p></div>
                 </div>
                 <div class="info-box" style="margin-top:14px;"><strong>Ce que ce prompt ne fait pas</strong> il ne remplace pas un juriste qui connaît votre droit applicable, vos pratiques de desk et votre client. Il détecte les incohérences générales. Votre expertise détecte le reste.</div>
@@ -3248,7 +3257,7 @@
   
     <div class="module-tag">Esprit critique</div>
     <h1 class="module-title">Prompts <em>de relecture</em></h1>
-    <p class="module-desc">A utiliser avec Claude ou ChatGPT après qu'une première IA a produit le document.</p>
+    <p class="module-desc">À utiliser avec Claude ou ChatGPT après qu'une première IA a produit le document.</p>
   </div>
 
   <div class="widget-wrap">
@@ -3260,7 +3269,7 @@
     <div class="wtab-body">
 
       <div class="wtab-pane active" id="pr0">
-        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Copiez, collez le texte a analyser a la fin.</p>
+        <p style="font-size:17px;color:var(--muted);margin-bottom:14px;">Copiez, collez le texte à analyser à la fin.</p>
         <div class="prompt-expert-box" id="pr-expert-box"><span class="pe-kw">Tu es juriste shipping senior (oil & tanker market), expert en charter parties et analyse marché.</span>
 Ta mission est de produire une relecture critique structurée du document ci-dessous.
 
@@ -3286,11 +3295,11 @@ Ta mission est de produire une relecture critique structurée du document ci-des
 
 Conclus par :
 - Une synthèse des risques principaux
-- Les informations complémentaires a obtenir avant validation
+- Les informations complémentaires à obtenir avant validation
 
 <span class="pe-ph">[COLLER LE TEXTE A ANALYSER ICI]</span></div>
         <button class="copy-prompt-btn" onclick="copyEl('pr-expert-box')">Copier ce prompt</button>
-        <div class="tip-box" style="margin-top:14px;"><strong>Résultat attendu</strong> Une liste structurée de 10 a 20 points classés par gravité, avec les formulations exactes a corriger.</div>
+        <div class="tip-box" style="margin-top:14px;"><strong>Résultat attendu</strong> Une liste structurée de 10 à 20 points classés par gravité, avec les formulations exactes à corriger.</div>
         <div class="warn-box"><strong>À retenir</strong> les règles impératives en début de prompt sont essentielles. Sans elles, l'IA comble les manques avec des données inventées plutôt que de signaler l'incertitude.</div>
       </div>
 
@@ -3298,9 +3307,9 @@ Conclus par :
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
           <div class="card-sm" style="border-top:3px solid var(--danger);"><strong style="font-size:15px;">Règles impératives</strong><p style="font-size:15px;margin-top:6px;">Sans ces règles, l'IA invente plutôt qu'admettre l'incertitude. Les balises [information insuffisante] forcent la transparence.</p></div>
           <div class="card-sm" style="border-top:3px solid var(--blue);"><strong style="font-size:15px;">Le rôle précis</strong><p style="font-size:15px;margin-top:6px;">« Juriste shipping senior » oriente vers l'espace contractuel maritime. Sans rôle, l'IA reste généraliste.</p></div>
-          <div class="card-sm" style="border-top:3px solid var(--success);"><strong style="font-size:15px;">La structure en 6 points</strong><p style="font-size:15px;margin-top:6px;">Oblige l'IA a passer en revue chaque catégorie d'erreur, y compris les oublis qu'elle ne signalerait pas spontanément.</p></div>
+          <div class="card-sm" style="border-top:3px solid var(--success);"><strong style="font-size:15px;">La structure en 6 points</strong><p style="font-size:15px;margin-top:6px;">Oblige l'IA à passer en revue chaque catégorie d'erreur, y compris les oublis qu'elle ne signalerait pas spontanément.</p></div>
           <div class="card-sm" style="border-top:3px solid var(--warn);"><strong style="font-size:15px;">La gravité</strong><p style="font-size:15px;margin-top:6px;">Sans elle, l'IA liste tout au même niveau. Savoir ce qui est critique vs mineur détermine ce que vous corrigez en priorité.</p></div>
-          <div class="card-sm"><strong style="font-size:15px;">La conclusion forcée</strong><p style="font-size:15px;margin-top:6px;">Demander les « informations complémentaires » force l'IA a signaler ce qu'elle ne peut pas analyser.</p></div>
+          <div class="card-sm"><strong style="font-size:15px;">La conclusion forcée</strong><p style="font-size:15px;margin-top:6px;">Demander les « informations complémentaires » force l'IA à signaler ce qu'elle ne peut pas analyser.</p></div>
           <div class="card-sm"><strong style="font-size:15px;">La deuxième IA</strong><p style="font-size:15px;margin-top:6px;">Ce prompt est conçu pour être utilisé par une IA différente de celle qui a produit le texte. Les deux n'ont pas les mêmes biais.</p></div>
         </div>
         <div class="info-box" style="margin-top:14px;"><strong>Ce que ce prompt ne fait pas</strong> il ne remplace pas un juriste qui connaît votre droit applicable, vos pratiques de desk et votre client. Il détecte les incohérences générales. Votre expertise détecte le reste.</div>
@@ -3355,7 +3364,7 @@ Conclus par :
 
       <div class="wtab-pane" id="b5t2">
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin-bottom:14px;" id="b5-techniques"></div>
-        <div class="warn-box"><strong>Par où commencer</strong> Few-shot et Auto-évaluation donnent des résultats immédiats sur n'importe quelle tâche. Les autres sont a intégrer progressivement.</div>
+        <div class="warn-box"><strong>Par où commencer</strong> Few-shot et Auto-évaluation donnent des résultats immédiats sur n'importe quelle tâche. Les autres sont à intégrer progressivement.</div>
       </div>
 
       
@@ -5615,7 +5624,7 @@ function initBloc1LLM() {
       b1SemClick(d.w);
       const v = B1_VECS[i];
       const dims = v.map(x => `<span style="color:var(--orange);font-weight:700;">` + x.toFixed(2) + `</span>`).join(`, `);
-      var _bvo=document.getElementById('b1-vec-out');if(_bvo)_bvo.innerHTML = `[ ` + dims + `, <span style="color:var(--muted);">...</span> ] <span style="color:var(--muted);font-size:11px;">des centaines a des milliers de chiffres selon le modele</span>`;
+      var _bvo=document.getElementById('b1-vec-out');if(_bvo)_bvo.innerHTML = `[ ` + dims + `, <span style="color:var(--muted);">...</span> ] <span style="color:var(--muted);font-size:11px;">des centaines à des milliers de chiffres selon le modele</span>`;
       var _bvi2 = document.getElementById(`b1-vec-insight`);
       if (_bvi2) { _bvi2.style.display = `block`; _bvi2.innerHTML = `<strong>` + d.w + `</strong> : ` + d.note; }
     };
@@ -5628,13 +5637,13 @@ const B1_CONTEXTS = [
   {id:0, phrase:`Etant donné les tensions actuelles, le transit par <strong style="color:var(--warn);">Suez</strong> représente un risque opérationnel majeur pour cette cargaison.`,
    clusters:[{l:"Risque / sécurité",c:"#C0392B"},{l:"Détournement / coûts",c:"#E8943A"},{l:"Assurance maritime",c:"#9B59B6"},{l:"Géopolitique",c:"#C0392B"}],
    insight:`<strong>Signaux qui ont orienté le calcul :</strong> "navire", "attaque", "détroit" font basculer vers l'espace maritime. Les dimensions "cinéma" et "informatique" sont presque éteintes.`},
-  {id:1, phrase:`Le <strong style="color:var(--blue);">canal de Suez</strong> relie la mer Rouge a la Méditerranée et réduit de 7 000 km la route entre l'Europe et l'Asie.`,
+  {id:1, phrase:`Le <strong style="color:var(--blue);">canal de Suez</strong> relie la mer Rouge à la Méditerranée et réduit de 7 000 km la route entre l'Europe et l'Asie.`,
    clusters:[{l:"Route / navigation",c:"#04588C"},{l:"Géographie",c:"#1A6B3C"},{l:"Infrastructure",c:"#3A86C8"},{l:"Distance / temps",c:"#117A65"}],
    insight:`<strong>Signaux qui ont orienté le calcul :</strong> "canal", "kilomètres", "route maritime". Meme mot, calcul différent parce que les mots environnants ont changé.`},
   {id:2, phrase:`La crise de <strong style="color:var(--success);">Suez</strong> de 1956 marqua un tournant dans la décolonisation et le déclin de l'influence britannique.`,
    clusters:[{l:"Histoire / politique",c:"#7D3C98"},{l:"Décolonisation",c:"#884EA0"},{l:"Diplomatie",c:"#1A6B3C"},{l:"Moyen-Orient",c:"#E8943A"}],
    insight:`Ce contexte historique recalcule "Suez" vers un espace totalement différent : politique internationale, années 1950. Meme mot, troisième adresse numérique.`},
-  {id:3, phrase:`Les attaques <strong style="color:var(--blue);">Houthis</strong> en mer Rouge depuis fin 2023 ont contraint de nombreux armateurs a dérouter par le Cap de Bonne Espérance.`,
+  {id:3, phrase:`Les attaques <strong style="color:var(--blue);">Houthis</strong> en mer Rouge depuis fin 2023 ont contraint de nombreux armateurs à dérouter par le Cap de Bonne Espérance.`,
    clusters:[{l:"Géopolitique",c:"#C0392B"},{l:"Routes / logistique",c:"#04588C"},{l:"Maritime / actualité",c:"#D95F18"},{l:"Primes assurance",c:"#9B59B6"}],
    insight:`<strong>Test de coupure :</strong> un modele sans connexion web coupé avant fin 2023 ne sait pas ce que "Houthis" signifie dans un contexte shipping. Il connaît le Yémen géopolitique, pas l'impact sur les routes.`},
 ];
@@ -5927,9 +5936,9 @@ function b3Vote(i, zone) {
 
 // ── ESPRIT CRITIQUE ──────────────────────
 const EC_PILIERS = [
-  {num:"1",color:"#04588C",title:"Briefer",sub:"Role + contexte + format",tag:"Signal d'entrée",
-   items:["Donnez votre role : 'Je suis broker tanker chez BRS.'","Donnez le contexte précis : le document, la situation, la date.","Spécifiez le format : '5 points', 'email de 3 paragraphes', 'tableau'.","Sans ces signaux, l'IA choisit le sens le plus fréquent. Rarement le bon."],
-   example:"'Tu es expert droit maritime. Analyse les clauses War Risk de ce CP. Identifie les 3 points a renégocier. Format : liste numérotée.'"},
+  {num:"1",color:"#04588C",title:"Briefer",sub:"Rôle + contexte + format",tag:"Signal d'entrée",
+   items:["Donnez votre rôle : 'Je suis broker tanker chez BRS.'","Donnez le contexte précis : le document, la situation, la date.","Spécifiez le format : '5 points', 'email de 3 paragraphes', 'tableau'.","Sans ces signaux, l'IA choisit le sens le plus fréquent. Rarement le bon."],
+   example:"'Tu es expert droit maritime. Analyse les clauses War Risk de ce CP. Identifie les 3 points à renégocier. Format : liste numérotée.'"},
   {num:"2",color:"#1A6B3C",title:"Sourcer",sub:"Vos données, pas les siennes",tag:"Qualité des données",
    items:["L'IA travaille mieux avec vos données qu'avec les siennes.","Collez directement les données fiables dans le prompt.","Citez la source : 'En t'appuyant sur ce rapport BIMCO...'","Ne publiez jamais un chiffre sans l'avoir vérifié dans une source primaire."],
    sub2:"Ses données à elle",
@@ -5996,7 +6005,7 @@ function initRelecture() {
 }
 
 const RL_ERRORS = [
-  {id:"e1",color:"#C0392B",label:"Chiffre inventé",explanation:"Le BDTI n'était pas a 1 847 points en mars 2025. L'IA a produit un chiffre plausible. Vérification obligatoire sur Baltic Exchange."},
+  {id:"e1",color:"#C0392B",label:"Chiffre inventé",explanation:"Le BDTI n'était pas à 1 847 points en mars 2025. L'IA a produit un chiffre plausible. Vérification obligatoire sur Baltic Exchange."},
   {id:"e2",color:"#7D3C98",label:"Hallucination",explanation:"La 'clause Suezmax Restriction 2023' n'existe pas comme clause standard. L'IA a inventé un nom crédible. Vérifiez toujours les références de clauses."},
   {id:"e3",color:"#E8943A",label:"Faux ami",explanation:"'Freight prepaid' ne se traduit pas par 'fret prépayé' en contexte contractuel. La formulation correcte est 'nolis payé d'avance'. Un calque qui crée une ambiguïté juridique."},
   {id:"e4",color:"#1A6B3C",label:"Information manquante",explanation:"Les clauses Additional War Risk Premium (AWRP), standard en mer Rouge depuis fin 2023, ne sont pas mentionnées. Ce qu'elle ignore, elle ne le signale pas."},
@@ -6273,7 +6282,7 @@ const B5_TECHNIQUES = [
   {num:"5",color:"#7D3C98",title:"NSA",tag:"Niveau Supérieur d'Abstraction",desc:"Demandez à l'IA d'examiner l'essence du problème et ses implications larges avant de répondre.",when:"Pour les analyses stratégiques ou les questions complexes ou la réponse de surface n'est pas suffisante.",example:"Avant de répondre, utilise le NSA : examine l'essence du problème\net ses implications larges. Expose ta démarche.\nEnsuite seulement, donne ta recommandation."},
   {num:"6",color:"#C0392B",title:"Prompting inversé",tag:"L'IA clarifie d'abord",desc:"Demandez à l'IA de vous poser 5 questions pour pouvoir produire la meilleure réponse possible.",when:"Quand votre demande est complexe et que vous n'etes pas sur d'avoir tout précisé.",example:"Pose-moi 5 questions (avec exemples de réponse possible) pour pouvoir\nrédiger la meilleure analyse de ce charterparty.\nAttends mes réponses avant de commencer."},
   {num:"7",color:"#117A65",title:"Vérification RAG",tag:"Source + extrait pour chaque affirmation",desc:"Demandez à l'IA de citer l'extrait exact et le numéro de page pour chaque affirmation. Limite les hallucinations.",when:"Sur tout document long à fort enjeu : rapport de marché, charterparty, accord de confidentialité.",example:"Pour chaque point identifié, cite :\n- L'extrait exact du document\n- Le numéro de page ou de clause\nNe fais aucune affirmation sans la sourcer dans le texte fourni."},
-  {num:"8",color:"#003557",title:"Balises XML",tag:"Séparer données et instruction",desc:"Encadrez vos données avec des balises pour éviter que l'IA confonde vos données avec vos instructions.",when:"Quand vous fournissez un document a analyser en meme temps que des instructions complexes.",example:"<document>\n[Coller le charterparty ici]\n</document>\n\n<instruction>\nIdentifie les 3 clauses à risque les plus critiques.\n</instruction>"},
+  {num:"8",color:"#003557",title:"Balises XML",tag:"Séparer données et instruction",desc:"Encadrez vos données avec des balises pour éviter que l'IA confonde vos données avec vos instructions.",when:"Quand vous fournissez un document à analyser en même temps que des instructions complexes.",example:"<document>\n[Coller le charterparty ici]\n</document>\n\n<instruction>\nIdentifie les 3 clauses à risque les plus critiques.\n</instruction>"},
 ];
 
 let b5OpenTech = null;
