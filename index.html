@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Bien utiliser chaque outil IA · BRS Shipbrokers</title>
+<title id="doc-title">Bien utiliser chaque outil IA · BRS Shipbrokers</title>
 <style>
 
   @import url('https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap');
@@ -2121,7 +2121,7 @@
 <!-- SIDEBAR -->
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-header">
-    <div class="sidebar-logo"><span style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);">Acculturation</span><br>IA générative · BRS<br><span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">Mars 2026</span></div>
+    <div class="sidebar-logo" id="sidebar-logo-el"><span style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);">Acculturation</span><br>IA générative · BRS<br><span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">Mars 2026</span></div>
   </div>
   <div class="sidebar-nav">
 
@@ -2157,10 +2157,10 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-header open" onclick="toggleNavGroup(this)">Bloc 4 · Cas BRS<span class="nav-group-arrow">▶</span></div>
+        <div class="nav-group-header open" id="nav-bloc4-header" onclick="toggleNavGroup(this)">Bloc 4 · Cas BRS<span class="nav-group-arrow">▶</span></div>
         <div class="nav-group-items open">
           <button class="nav-item" onclick="showPage('bloc4-cas',this)"><span class="nav-dot"></span>Cas brokers</button>
-          <button class="nav-item" onclick="showPage('brs-reflexes',this)"><span class="nav-dot"></span>Réflexes IA BRS</button>
+          <button class="nav-item" onclick="showPage('brs-reflexes',this)" data-client-only="brs"><span class="nav-dot"></span>Réflexes IA BRS</button>
         </div>
       </div>
 
@@ -4206,7 +4206,7 @@ Conclus par :
         </div><!-- end max-width wrapper -->
       </div>
 
-<div class="page" id="page-brs-situations">
+<div class="page" id="page-brs-situations" data-client-only="brs">
         <div class="module-hero">
   <div class="ref-banner">
     <div class="ref-banner-icon" style="font-size:16px;opacity:0.7;">→</div>
@@ -4419,7 +4419,7 @@ Conclus par :
         </div>
       </div>
 
-<div class="page" id="page-brs-copilot">
+<div class="page" id="page-brs-copilot" data-client-only="brs">
   <div class="module-hero">
   <div class="ref-banner">
     <div class="ref-banner-icon" style="font-size:16px;opacity:0.7;">→</div>
@@ -4487,7 +4487,7 @@ Conclus par :
   <div class="warn-box" style="margin-top:6px;"><strong>À retenir</strong> Copilot lit vos fichiers M365. Il ne connaît pas le droit maritime, vos pratiques de marché ou les conditions du moment. Vous, oui.</div>
 </div>
 
-<div class="page page-core" id="page-brs-reflexes">
+<div class="page page-core" id="page-brs-reflexes" data-client-only="brs">
         <div class="module-hero">
           <div class="module-tag">BRS</div>
           <h1 class="module-title">Réflexes <em>IA BRS</em></h1>
@@ -4675,7 +4675,7 @@ Conclus par :
   
 
 
-<div class="page" id="page-brs-delegation">
+<div class="page" id="page-brs-delegation" data-client-only="brs">
   <div class="module-hero">
   <div class="ref-banner">
     <div class="ref-banner-icon" style="font-size:16px;opacity:0.7;">→</div>
@@ -5051,7 +5051,104 @@ Conclus par :
 </div><!-- /content -->
 </div><!-- /main -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>const PAGES = [
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>// ═══════════════════════════════════════════════════════════════════════
+// CONFIGURATION CLIENTS
+// Pour un nouveau client : ajouter une entrée dans CLIENTS
+// Déployer avec ?c=<id> (ex. index.html?c=brs)
+// ═══════════════════════════════════════════════════════════════════════
+const CLIENTS = {
+  brs: {
+    name:     "BRS Shipbrokers",
+    short:    "BRS",
+    date:     "Mars 2026",
+    password: "brs2026",
+    colors: {
+      "--navy":   "#003557",
+      "--orange": "#D95F18",
+      "--blue":   "#04588C"
+    },
+    pages: ["brs-situations","brs-copilot","brs-reflexes","brs-delegation"],
+    bloc4label: "Bloc 4 · Cas BRS",
+    id: "brs"
+  }
+  // Nouveau client : copier le bloc ci-dessus et adapter
+  // ,acme: {
+  //   name: "Acme Corp", short: "Acme", date: "Avril 2026", password: "acme2026",
+  //   colors: { "--navy": "#1a1a2e", "--orange": "#e94560", "--blue": "#16213e" },
+  //   pages: ["acme-situations","acme-copilot","acme-reflexes","acme-delegation"],
+  //   bloc4label: "Bloc 4 · Cas Acme"
+  // }
+};
+
+// Lecture du paramètre URL ─ fallback sur BRS
+const _urlC = new URLSearchParams(window.location.search).get("c") || "brs";
+const CFG   = CLIENTS[_urlC] || CLIENTS["brs"];
+
+function _applyClientConfig() {
+  // Titre de l'onglet
+  const titleEl = document.getElementById("doc-title");
+  if (titleEl) titleEl.textContent = "Bien utiliser chaque outil IA · " + CFG.name;
+
+  // Logo sidebar
+  const logoEl = document.getElementById("sidebar-logo-el");
+  if (logoEl) logoEl.innerHTML =
+    '<span style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);">Acculturation</span><br>' +
+    "IA générative · " + CFG.short + "<br>" +
+    '<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">' + CFG.date + "</span>";
+
+  // Couleurs CSS
+  const root = document.documentElement;
+  Object.entries(CFG.colors).forEach(([k, v]) => root.style.setProperty(k, v));
+
+  // Label nav Bloc 4
+  const bloc4header = document.getElementById("nav-bloc4-header");
+  if (bloc4header && CFG.bloc4label) {
+    bloc4header.innerHTML = CFG.bloc4label + '<span class="nav-group-arrow">▶</span>';
+  }
+
+  // Masquer les éléments réservés à d'autres clients
+  document.querySelectorAll("[data-client-only]").forEach(el => {
+    const forClient = el.getAttribute("data-client-only");
+    if (forClient !== _urlC && forClient !== (CFG.id || _urlC)) {
+      el.style.display = "none";
+    }
+  });
+
+  // Porte d'accès (gate) avec mot de passe
+  if (CFG.password) {
+    const gate = document.createElement("div");
+    gate.id = "gate";
+    gate.innerHTML =
+      '<div class="gate-inner">' +
+      '<div class="gate-logo">Acculturation IA · ' + CFG.short + '</div>' +
+      '<div class="gate-title">Bien utiliser<br>chaque outil IA</div>' +
+      '<input class="gate-input" id="gate-input" type="password" placeholder="Mot de passe" autocomplete="current-password">' +
+      '<button class="gate-btn" onclick="_checkGate()">Accéder à la formation</button>' +
+      '<div class="gate-error" id="gate-error">Mot de passe incorrect</div>' +
+      "</div>";
+    document.body.prepend(gate);
+    document.getElementById("gate-input").addEventListener("keydown", e => {
+      if (e.key === "Enter") _checkGate();
+    });
+  }
+}
+
+function _checkGate() {
+  const input = document.getElementById("gate-input");
+  const errEl = document.getElementById("gate-error");
+  if (!input) return;
+  if (input.value === CFG.password) {
+    const gate = document.getElementById("gate");
+    if (gate) gate.style.display = "none";
+  } else {
+    if (errEl) { errEl.style.display = "block"; }
+    input.value = "";
+    input.focus();
+  }
+}
+// ═══════════════════════════════════════════════════════════════════════
+
+const PAGES_GENERIC = [
   `quiz-depart`,`intro`,`bloc1-llm`,`bloc1-consequences`,
   `biais`,
   `bloc2-outils`,`bloc2-decision`,
@@ -5059,9 +5156,16 @@ Conclus par :
   `esprit-critique`,`relecture`,`protocoles`,
   `bloc4-cas`,`bloc5-regles`,
   `regles-prompt`,`patterns`,`techniques`,
-  `confidentialite`,`tarifs`,
-    `scenarios`,`brs-situations`,`brs-copilot`,`brs-reflexes`,`brs-delegation`,
+  `confidentialite`,`tarifs`,`scenarios`,
   `niveaux-agents`,`quiz`,`langage`,`mentions`
+];
+// Pages client insérées avant 'niveaux-agents'
+const _clientPages = CFG.pages || [];
+const _insertAt = PAGES_GENERIC.indexOf(`niveaux-agents`);
+const PAGES = [
+  ...PAGES_GENERIC.slice(0, _insertAt),
+  ..._clientPages,
+  ...PAGES_GENERIC.slice(_insertAt)
 ];
 
 const TITLES = {
@@ -6328,7 +6432,8 @@ function initPage(id) {
 
 // ── INIT ON LOAD ─────────────────────────
 document.addEventListener(`DOMContentLoaded`, () => {
-  showPage(`quiz-depart`, document.querySelector(`.nav-item`)); initQuizDepart();
+  _applyClientConfig();
+  showPage(`quiz-depart`, document.querySelector(`.nav-item:not([style*="display: none"])`)); initQuizDepart();
 });
 // ── BLOC 1 : IA PIRATERIE WIDGET ─────────────────────────────────────
 const B1_IAS = [
